@@ -18,6 +18,7 @@ It supports the following BitTorrent clients:
   * Synology Downloadstation
   * QNAP DownloadStation
   * tTorrent (Android)
+  * Freebox
 
 
 ## How do i get it running?

@@ -9,7 +9,8 @@ RTA.clients.config.getConfig = function(client, name) {
 		"QNAP DownloadStation" : RTA.clients.config.qnap,
 		"qBittorrent WebUI" : RTA.clients.config.qbittorrent,
 		"qBittorrent v4.1+ WebUI" : RTA.clients.config.qbittorrentv2,
-		"rTorrent XML-RPC" : RTA.clients.config.rtorrentxmlrpc
+		"rTorrent XML-RPC" : RTA.clients.config.rtorrentxmlrpc,
+		"Freebox" : RTA.clients.config.freebox,
 	};
 	
 	var config = "<table>" + RTA.clients.config.generalsettings.replace(/\{clienttype\}/g, client).replace(/\{name\}/g, name);
@@ -70,6 +71,8 @@ RTA.clients.config.deluge = multiline(function(){/*
 				</tr>
 			</tbody>
 			*/});
+			
+
 
 RTA.clients.config.rutorrent = multiline(function(){/*
 			<tbody name="rutorrentspecifics" class="specifics">
@@ -235,6 +238,16 @@ RTA.clients.config.qbittorrentv2 = multiline(function(){/*
 					<td><span class="title">Label/Directory<br/>interactivity</span></td>
 					<td><input type="checkbox" name="qbittorrentv2dirlabelask" /><br />
 						<span class="tip">Enable this to always ask for a label/directory combination upon adding torrents.</span></td>
+				</tr>
+			</tbody>
+			*/});
+
+RTA.clients.config.freebox = multiline(function(){/*
+			<tbody name="freeboxpecifics" class="specifics">
+				<tr>
+					<td><span class="title">Path</span><br />(optional)</td>
+					<td><input type="text" name="freeboxpath" /><br />
+						<span class="tip">Freebox defaults to /Disque dur/Téléchargements, if you've a RAID array, change this to /RaidArray/Téléchargements</span></td>
 				</tr>
 			</tbody>
 			*/});

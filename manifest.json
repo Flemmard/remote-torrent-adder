@@ -19,6 +19,7 @@
 			"webuiapis/VuzeSwingUI.js",
 			"webuiapis/TorrentfluxWebUI.js",
 			"webuiapis/TransmissionWebUI.js",
+			"webuiapis/Freebox.js",
 			"webuiapis/uTorrentWebUI.js",
 			"webuiapis/ruTorrentWebUI.js",
 			"webuiapis/VuzeHTMLUI.js",
